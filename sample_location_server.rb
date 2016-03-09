@@ -144,11 +144,7 @@ puts "SECRET is #{SECRET}"
 VALIDATOR = ARGV[argOff + 1]
 puts "VALIDATOR is #{VALIDATOR}"
 
-if ARGV.size > argOff + 2
-  db = "sqlite:/tmp/" + ARGV[argOff + 2]
-else
-  db = "sqlite:memory:"
-end
+db = ENV['DATABASE_URL']
 puts "Writing database to #{db}"
 
 # ---- Load anonimization data --------
