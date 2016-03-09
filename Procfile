@@ -1,0 +1,1 @@
+web: ruby sample_location_server.rb $SECRET $VALIDATOR
